@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_5</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="firstNumber">Premier nombre : </label><input type="text" id="firstNumber" name="firstNumber"/><br/>
+            <label for="secondNumber">Deuxième nombre : </label><input type="text" id="secondNumber" name="secondNumber"/><br/>
+            <button onclick="myFunction()" id="submit" name ="submit">Valider</button>
+        </form>
+
+        <script>
+            function myFunction() {
+                var FirstNumber = parseInt(document.getElementById("firstNumber").value);
+                var SecondNumber = parseFloat(document.getElementById("secondNumber").value);
+                var Total = FirstNumber * SecondNumber;
+
+
+             if(String(FirstNumber) == "NaN" || String(SecondNumber) == "NaN")
+             
+             {
+                alert("Merci de n'utiliser que des nombre décimaux")
+                return
+             }
+                alert(Total);
+            }
+        </script>
+
+    </body>
+</html>
